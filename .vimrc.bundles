@@ -19,13 +19,13 @@ Plugin 'gmarik/Vundle.vim'
 " All of your Plugins must be added before the following line
 
 "Plugin 'klen/python-mode'
-Plugin 'python-mode/python-mode'
+"Plugin 'python-mode/python-mode'
 
 " auto complete
 " 代码自动补全
 " 迄今为止用到的最好的自动VIM自动补全插件
 " 重启 :YcmRestartServer 
-"Plugin 'Valloric/YouCompleteMe' "need vim version>7.4
+Plugin 'Valloric/YouCompleteMe' "need vim version>7.4
 
 " 自动补全单引号，双引号等
 Plugin 'Raimondi/delimitMate'

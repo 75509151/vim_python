@@ -7,8 +7,8 @@ syntax on
 
 
 " install bundles
-if filereadable(expand("~/kiosk/.vimrc.bundles"))
-  source ~/kiosk/.vimrc.bundles
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
 endif
 
 
@@ -61,6 +61,9 @@ set ruler
 set showcmd
 " 左下角显示当前vim模式
 set showmode
+
+"输入时显示相对应的括号
+"set showmatch
 
 " 在上下移动光标时，光标的上方或下方至少会保留显示的行数
 set scrolloff=7
