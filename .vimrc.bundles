@@ -19,7 +19,7 @@ Plugin 'gmarik/Vundle.vim'
 " All of your Plugins must be added before the following line
 
 "Plugin 'klen/python-mode'
-"Plugin 'python-mode/python-mode'
+Plugin 'python-mode/python-mode'
 
 " auto complete
 " 代码自动补全
@@ -32,6 +32,10 @@ Plugin 'Raimondi/delimitMate'
 
 " 快速注释
 Plugin 'scrooloose/nerdcommenter'
+
+" python 语法检查 vim8可以使用 w0rp/ale
+" Plugin 'scrooloose/syntastic'
+Plugin "w0rp/ale"
 
 " quick selection and edit
 " expandregion
