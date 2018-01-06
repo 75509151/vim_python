@@ -7,7 +7,7 @@ filetype off " required! turn off
 " vim plugin bundle control, command model
 " ----------------------------------------------------------------------------
 
-
+"git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -18,8 +18,8 @@ Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 " All of your Plugins must be added before the following line
 
-"Plugin 'klen/python-mode'
-Plugin 'python-mode/python-mode'
+Plugin 'klen/python-mode'
+"Plugin 'python-mode/python-mode'
 
 " auto complete
 " 代码自动补全
@@ -35,7 +35,7 @@ Plugin 'scrooloose/nerdcommenter'
 
 " python 语法检查 vim8可以使用 w0rp/ale
 " Plugin 'scrooloose/syntastic'
-Plugin "w0rp/ale"
+Plugin 'w0rp/ale'
 
 " quick selection and edit
 " expandregion
@@ -67,6 +67,7 @@ Plugin 'dyng/ctrlsf.vim'
 Bundle 'scrooloose/nerdtree'
 "Bundle 'altercation/vim-colors-solarized'
 Bundle 'vcscommand.vim'
+" ubuntu sudo apt-get install exuberant-ctags
 Bundle 'taglist.vim'
 
 call vundle#end()            " required
@@ -79,6 +80,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeT
 " ################### Taglist config ###################
 let Tlist_Exit_OnlyWindow = 1          "如果taglist窗口是最后一个窗口，则退出vim
 let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口
+let Tlist_Show_One_File = 1            "不同时显示多个文件的taglist
 
 map <F1> :TlistToggle<cr> 
 
@@ -128,3 +130,8 @@ map <F1> :TlistToggle<cr>
         \ 'gitcommit' : 1,
         \}
 " }}}
+
+
+"""""""""""""""""""""""""""
+"" pymode set
+""""""""""""""""""""""""""
