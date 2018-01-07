@@ -73,6 +73,7 @@ Bundle 'taglist.vim'
 
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'Yggdroot/indentLine'
+"pip install autopep8
 Plugin 'tell-k/vim-autopep8'
 
 call vundle#end()            " required
