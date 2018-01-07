@@ -71,6 +71,10 @@ Bundle 'vcscommand.vim'
 " ubuntu sudo apt-get install exuberant-ctags
 Bundle 'taglist.vim'
 
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'Yggdroot/indentLine'
+Plugin 'tell-k/vim-autopep8'
+
 call vundle#end()            " required
 
 
@@ -195,3 +199,16 @@ inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 let g:ctrlsf_auto_close = 0
 "defines default case-sensitivity in search, smart is works the same as vim (default)
 "let g:ctrlsf_case_sensitive = 'no'
+
+
+""""""""""""""""""""""""
+"indentline config
+""""""""""""""""""""""
+"缩进指示线"
+let g:indentLine_char='┆'
+let g:indentLine_enabled = 1
+
+""""""""""""""""""""""""
+"autopep8 config
+""""""""""""""""""""""
+let g:autopep8_disable_show_diff=1
