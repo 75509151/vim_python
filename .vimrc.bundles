@@ -57,6 +57,7 @@ Plugin 'ctrlpvim/ctrlp.vim' | Plugin 'tacahiroy/ctrlp-funky'
 " t       在tab中打开(建议)
 " T - Lkie t but focus CtrlSF window instead of opened new tab.
 " q - Quit CtrlSF window.
+"ubuntu apt-get install silversearcher-ag
 Plugin 'dyng/ctrlsf.vim'
 " incsearch
 " Plug 'haya14busa/incsearch.vim'
@@ -135,3 +136,62 @@ map <F1> :TlistToggle<cr>
 """""""""""""""""""""""""""
 "" pymode set
 """"""""""""""""""""""""""
+"turn off code checking
+let g:pymode_lint = 0
+
+"""""""""""""""""""""""
+" ale config 
+""""""""""""""""""""
+" Set this setting in vimrc if you want to fix files automatically on save.
+" This is off by default.
+let g:ale_fix_on_save = 1
+
+" Check Python files with flake8 and pylint.
+let b:ale_linters = ['flake8', 'pylint']
+" Fix Python files with autopep8 and yapf.
+let b:ale_fixers = ['autopep8', 'yapf']
+
+"始终开启标志列
+let g:ale_sign_column_always = 1
+let g:ale_set_highlights = 0
+"自定义error和warning图标
+let g:ale_sign_error = '✗'                                                                                                                                                                                   
+let g:ale_sign_warning = '⚡ '
+"在vim自带的状态栏中整合ale
+let g:ale_statusline_format = ['✗ %d', '⚡  %d', '✔ OK']
+"显示Linter名称,出错或警告等相关信息
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+"let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+"普通模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
+nmap sp <Plug>(ale_previous_wrap)
+nmap sn <Plug>(ale_next_wrap)
+"<Leader>s触发/关闭语法检查
+nmap <Leader>s :ALEToggle<CR>
+"<Leader>d查看错误或警告的详细信息                                                                                                                                                                           
+nmap <Leader>d :ALEDetail<CR>
+"文件内容发生变化时不进行检查
+"let g:ale_lint_on_text_changed = 'never'
+"打开文件时不进行检查
+let g:ale_lint_on_enter = 0
+
+
+"""""""""""""""""""""""""
+" ctrlsf confi
+"""""""""""""""""""""""""
+
+let g:ctrlsf_ackprg = 'ag'   " 设置ctrlsf 使用ag
+nmap     <C-F>f <Plug>CtrlSFPrompt
+vmap     <C-F>f <Plug>CtrlSFVwordPath
+vmap     <C-F>F <Plug>CtrlSFVwordExec
+nmap     <C-F>n <Plug>CtrlSFCwordPath
+nmap     <C-F>p <Plug>CtrlSFPwordPath
+nnoremap <C-F>o :CtrlSFOpen<CR>
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+
+"CtrlSF close itself when you are opening some file
+let g:ctrlsf_auto_close = 0
+"defines default case-sensitivity in search, smart is works the same as vim (default)
+"let g:ctrlsf_case_sensitive = 'no'
