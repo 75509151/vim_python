@@ -1,10 +1,10 @@
 home_vimrc=$HOME/.vimrc
 home_vimbundles=$HOME/.vimrc.bundles
-if [ -f $home_vimrc ];then
+if [ -f "$home_vimrc" ];then
   cp $home_vimrc $HOME/.vimrc_backup
 fi
 
-if [ -f $home_vimbundles ];then
+if [ -f "$home_vimbundles" ];then
   cp $home_vimbundles $HOME/.vimrc.bundles_backup
 fi
 
