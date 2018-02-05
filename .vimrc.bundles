@@ -213,3 +213,7 @@ let g:indentLine_enabled = 1
 "autopep8 config
 """"""""""""""""""""""
 let g:autopep8_disable_show_diff=1
+
+"################## python-mode ######
+"取消代码折叠
+let g:pymode_folding = 0
