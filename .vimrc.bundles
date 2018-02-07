@@ -149,7 +149,7 @@ let g:pymode_lint = 0
 """"""""""""""""""""
 " Set this setting in vimrc if you want to fix files automatically on save.
 " This is off by default.
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 
 " Check Python files with flake8 and pylint.
 let b:ale_linters = ['flake8', 'pylint']
