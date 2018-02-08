@@ -18,14 +18,6 @@ Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 " All of your Plugins must be added before the following line
 
-Plugin 'klen/python-mode'
-"Plugin 'python-mode/python-mode'
-
-" auto complete
-" 代码自动补全
-" 迄今为止用到的最好的自动VIM自动补全插件
-" 重启 :YcmRestartServer 
-Plugin 'Valloric/YouCompleteMe' "need vim version>7.4
 
 " 自动补全单引号，双引号等
 Plugin 'Raimondi/delimitMate'
@@ -71,10 +63,19 @@ Bundle 'vcscommand.vim'
 " ubuntu sudo apt-get install exuberant-ctags
 Bundle 'taglist.vim'
 
-Plugin 'Lokaltog/vim-powerline'
 Plugin 'Yggdroot/indentLine'
 "pip install autopep8
 Plugin 'tell-k/vim-autopep8'
+
+
+Plugin 'klen/python-mode'
+"Plugin 'python-mode/python-mode'
+
+" auto complete
+" 代码自动补全
+" 迄今为止用到的最好的自动VIM自动补全插件
+" 重启 :YcmRestartServer 
+Plugin 'Valloric/YouCompleteMe' "need vim version>7.4
 
 call vundle#end()            " required
 
@@ -181,6 +182,15 @@ nmap <Leader>d :ALEDetail<CR>
 "打开文件时不进行检查
 let g:ale_lint_on_enter = 0
 
+"在quickfix中显示错误信息
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+
+let g:ale_open_list = 1
+" Set this if you want to.
+" This can be useful if you are combining ALE with
+" some other plugin which sets quickfix errors, etc.
+let g:ale_keep_list_window_open = 1
 
 """""""""""""""""""""""""
 " ctrlsf confi
@@ -213,3 +223,7 @@ let g:indentLine_enabled = 1
 "autopep8 config
 """"""""""""""""""""""
 let g:autopep8_disable_show_diff=1
+
+"################## python-mode ######
+"取消代码折叠
+let g:pymode_folding = 0
