@@ -18,6 +18,8 @@ Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 " All of your Plugins must be added before the following line
 
+" python docstring
+Plugin 'heavenshell/vim-pydocstring'
 
 " 自动补全单引号，双引号等
 Plugin 'Raimondi/delimitMate'
