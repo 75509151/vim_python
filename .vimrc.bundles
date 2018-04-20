@@ -229,3 +229,10 @@ let g:autopep8_disable_show_diff=1
 "################## python-mode ######
 "取消代码折叠
 let g:pymode_folding = 0
+
+"################################
+"########### vim-autopep8
+"################################
+
+let g:autopep8_ignore="E501,W293"
+autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
