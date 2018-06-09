@@ -234,6 +234,10 @@ let g:pymode_options_colorcolumn = 0
 "设置最大行
 let g:pymode_options_max_line_length = 79
 
+"启用python-mode内置的python文档，使用K进行查找
+let g:pymode_doc = 1
+let g:pymode_doc_bind = '?'
+
 "################################
 "########### vim-autopep8
 "################################
