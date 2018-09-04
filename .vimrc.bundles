@@ -79,6 +79,16 @@ Plugin 'klen/python-mode'
 " 重启 :YcmRestartServer 
 Plugin 'Valloric/YouCompleteMe' "need vim version>7.4
 
+" js 
+Plugin 'mattn/emmet-vim'
+
+" css
+Plugin 'hail2u/vim-css3-syntax'
+" js 语法高亮
+Plugin 'pangloss/vim-javascript'
+
+"JavaScript omnifunc
+Plugin 'marijnh/tern_for_vim'
 call vundle#end()            " required
 
 
