@@ -18,6 +18,8 @@ Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 " All of your Plugins must be added before the following line
 
+Plugin 'rdnetto/YCM-Generator'
+
 " python docstring
 Plugin 'heavenshell/vim-pydocstring'
 
@@ -29,7 +31,7 @@ Plugin 'scrooloose/nerdcommenter'
 
 " python 语法检查 vim8可以使用 w0rp/ale
 " Plugin 'scrooloose/syntastic'
-Plugin 'w0rp/ale'
+"Plugin 'dense-analysis/ale'
 
 " quick selection and edit
 " expandregion
@@ -70,7 +72,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'tell-k/vim-autopep8'
 
 
-Plugin 'klen/python-mode'
+"Plugin 'klen/python-mode'
 "Plugin 'python-mode/python-mode'
 
 " auto complete
@@ -117,6 +119,8 @@ map <F1> :TlistToggle<cr>
     let g:ycm_use_ultisnips_completer = 1 "提示UltiSnips
     let g:ycm_collect_identifiers_from_comments_and_strings = 1   "注释和字符串中的文字也会被收入补全
     let g:ycm_collect_identifiers_from_tags_files = 1
+    "let g:ycm_max_num_candidates = 50
+    "let g:ycm_max_num_identifier_candidates = 10
     " 开启语法关键字补全
     let g:ycm_seed_identifiers_with_syntax=1
     " 回车作为选中
@@ -133,13 +137,7 @@ map <F1> :TlistToggle<cr>
 
     " 引入，可以补全系统，以及python的第三方包 针对新老版本YCM做了兼容
     " old version
-    if !empty(glob("~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
-        let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
-    endif
-    " new version
-    if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
-        let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
-    endif
+    let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
 
     " 直接触发自动补全 insert模式下
     " let g:ycm_key_invoke_completion = '<C-Space>'
@@ -150,13 +148,6 @@ map <F1> :TlistToggle<cr>
         \}
 " }}}
 
-
-"""""""""""""""""""""""""""
-"" pymode set
-""""""""""""""""""""""""""
-"turn off code checking
-let g:pymode_lint = 0
-
 """""""""""""""""""""""
 " ale config 
 """"""""""""""""""""
@@ -165,9 +156,9 @@ let g:pymode_lint = 0
 let g:ale_fix_on_save = 0
 
 " Check Python files with flake8 and pylint.
-let b:ale_linters = ['flake8', 'pylint']
+let b:ale_linters = ['pylint']
 " Fix Python files with autopep8 and yapf.
-let b:ale_fixers = ['autopep8', 'yapf']
+let b:ale_fixers = ['autopep8']
 
 "始终开启标志列
 let g:ale_sign_column_always = 1
